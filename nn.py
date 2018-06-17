@@ -21,6 +21,8 @@ y = np.array([[0, 0, 1, 1]]).T
 np.random.seed(1)
 
 # initialize weights randomly with mean 0
+# we have 3 inputs and 1 output so we need a matrix of 3x1
+# this connects all neurons on both sides with each other
 syn0 = 2 * np.random.random((3, 1)) - 1
 
 for iter in xrange(10000):
