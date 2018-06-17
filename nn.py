@@ -1,5 +1,6 @@
 import numpy as np
 
+# source https://iamtrask.github.io/2015/07/12/basic-python-network/
 # sigmoid function
 def nonlin(x, deriv=False):
     if (deriv == True):
@@ -14,6 +15,7 @@ X = np.array([[0, 0, 1],
               [1, 1, 1]])
 
 # output dataset
+# .T transposes it so it is a 'vertical' matrix
 y = np.array([[0, 0, 1, 1]]).T
 
 # seed random numbers to make calculation
@@ -31,6 +33,7 @@ for iter in xrange(10000):
     l1 = nonlin(np.dot(l0, syn0))
 
     # how much did we miss?
+    # the size of l1_error will be
     l1_error = y - l1
 
     if iter % 1000 == 0:
